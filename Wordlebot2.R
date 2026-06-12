@@ -1,8 +1,8 @@
 library(readxl)
 library(tidyverse)
 #pull the possible answers into R
-answer<-read.delim("C:/Users/maxfi/Documents/R/Wordle/all possible words.txt")
-trainer<-read.delim("C:/Users/maxfi/Documents/R/wordle/wordle-answers-alphabetical.txt")
+answer<-read.delim("C:/Your File Path/all possible words.txt")
+trainer<-read.delim("C:/Your File Path/wordle-answers-alphabetical.txt")
 ## create a smarter dataset so it will eliminate the most words with each guess
 test<-as.data.frame(str_split_fixed(trainer$Key,pattern = "",n = 5))
 for(i in 1:dim(test)[1]){
